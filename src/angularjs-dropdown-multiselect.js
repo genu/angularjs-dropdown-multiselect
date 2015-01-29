@@ -122,6 +122,10 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
 
                 $scope.singleSelection = $scope.settings.selectionLimit === 1;
 
+                if (_.isUndefined($scope.selectedModel)) {
+                  $scope.selectedModel = [];
+                }
+
                 function getFindObj(id) {
                     var findObj = {};
 
